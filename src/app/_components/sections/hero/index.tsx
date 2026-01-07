@@ -15,10 +15,10 @@ import { StackMarquee } from './stack-marquee'
 import type { HeroProps } from './types'
 
 export default function PortfolioHeroSection({
-	name = 'Your Name',
+	name = 'Marcos Padilla',
 	headline = 'Developer • AI Engineer • Data Analyst',
 	subheadline = 'I build fast, beautiful products — and I ship data + AI that actually moves metrics.',
-	location = 'Based in New York • Open to remote',
+	location = 'Based in Florida • Open to remote',
 	primaryCta = { label: 'View Projects', href: '#projects' },
 	secondaryCta = { label: 'Download Résumé', href: '/resume.pdf' },
 }: HeroProps) {

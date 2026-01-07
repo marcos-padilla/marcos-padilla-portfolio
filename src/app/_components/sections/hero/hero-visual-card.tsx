@@ -22,8 +22,6 @@ export function HeroVisualCard({
 	glowX,
 	glowY,
 }: HeroVisualCardProps) {
-	const chartData = [18, 28, 22, 38, 30, 52]
-
 	return (
 		<div className='relative'>
 			{/* cursor glow */}
@@ -131,37 +129,40 @@ export function HeroVisualCard({
 
 							<Card className='rounded-xl border-slate-200 bg-white p-3 gap-0'>
 								<CardContent className='p-0 gap-0'>
-									<div className='flex items-center justify-between'>
+									<div className='flex items-center justify-between mb-3'>
 										<span className='text-[11px] font-semibold text-slate-900'>
-											Uplift
-										</span>
-										<span className='text-[11px] text-emerald-600 font-semibold'>
-											+18.4%
+											Focus Areas
 										</span>
 									</div>
-									<div className='mt-2 flex h-20 items-end gap-2'>
-										{chartData.map((h, i) => (
+									<div className='space-y-2'>
+										{[
+											{ label: 'Full-Stack', color: 'bg-indigo-500' },
+											{ label: 'AI/ML', color: 'bg-emerald-500' },
+											{ label: 'Data Engineering', color: 'bg-cyan-500' },
+										].map((item, i) => (
 											<motion.div
 												key={i}
-												initial={{
-													height: 8,
-													opacity: 0.7,
-												}}
-												animate={{
-													height: h,
-													opacity: 1,
-												}}
+												initial={{ opacity: 0, x: -8 }}
+												animate={{ opacity: 1, x: 0 }}
 												transition={{
-													duration: 0.9,
-													delay: 0.25 + i * 0.06,
+													duration: 0.5,
+													delay: 0.3 + i * 0.1,
 												}}
-												className='w-full rounded-lg bg-slate-900/90'
-											/>
+												className='flex items-center gap-2'
+											>
+												<div
+													className={`h-1.5 w-1.5 rounded-full ${item.color}`}
+												/>
+												<span className='text-[10px] text-slate-600'>
+													{item.label}
+												</span>
+											</motion.div>
 										))}
 									</div>
-									<div className='mt-2 flex items-center justify-between text-[10px] text-slate-500'>
-										<span>baseline</span>
-										<span>today</span>
+									<div className='mt-3 pt-2 border-t border-slate-100'>
+										<p className='text-[10px] text-slate-500'>
+											Production-ready solutions
+										</p>
 									</div>
 								</CardContent>
 							</Card>
@@ -282,10 +283,6 @@ export function HeroVisualCard({
 					</motion.div>
 				</div>
 			</motion.div>
-
-			<p className='mt-3 text-center text-xs text-slate-400'>
-				Move your cursor for subtle depth ✨
-			</p>
 		</div>
 	)
 }

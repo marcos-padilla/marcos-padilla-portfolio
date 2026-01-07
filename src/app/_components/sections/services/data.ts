@@ -110,10 +110,10 @@ export const services: Service[] = [
 		description:
 			'Streamlining operations by connecting your tools and eliminating busywork.',
 		fullDescription:
-			'Your tools should talk to each other. We build robust automation workflows using platforms like Make (Integromat), Zapier, and custom webhooks. By bridging the gaps between your email, CRM, project management, and accounting software, we recover hundreds of hours of lost productivity every month.',
+			'Your tools should talk to each other. We build robust automation workflows using platforms like n8n, and custom webhooks. By bridging the gaps between your email, CRM, project management, and accounting software, we recover hundreds of hours of lost productivity every month.',
 		icon: Zap,
 		color: '#f59e0b', // amber-500
-		details: ['Zapier/Make', 'API Integrations', 'Auto-Reporting'],
+		details: ['n8n', 'API Integrations', 'Auto-Reporting'],
 		features: [
 			'Cross-platform synchronization',
 			'Error handling & logging',

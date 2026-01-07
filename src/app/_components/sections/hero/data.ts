@@ -40,7 +40,7 @@ export const credibilityData = [
 export const floatingCardsData = [
 	{
 		title: 'Projects',
-		value: '12+',
+		value: '6+',
 		hint: 'Full-stack apps',
 		tag: 'ship',
 	},

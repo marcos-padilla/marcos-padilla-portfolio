@@ -8,9 +8,6 @@ export function StackMarquee() {
 		<div className='mt-12'>
 			<div className='flex items-center justify-between px-0'>
 				<p className='text-xs font-medium text-slate-500'>Stack I use</p>
-				<p className='text-xs text-slate-400 hidden sm:block'>
-					(hover to pause)
-				</p>
 			</div>
 
 			{/* On mobile: wrap neatly (no marquee) */}

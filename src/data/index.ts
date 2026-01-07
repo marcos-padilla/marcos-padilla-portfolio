@@ -9,7 +9,7 @@ import type {
 } from '@/types'
 
 export const PROFILE: Profile = {
-	name: 'Your Name',
+	name: 'Marcos Padilla',
 	title: 'Data Analyst • Full-Stack Developer',
 	location: 'New York, USA',
 	blurb: 'I build clean, fast products and analyze data to uncover insights. I blend analytics with engineering to ship measurable outcomes.',

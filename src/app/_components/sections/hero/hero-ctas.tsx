@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 
 interface HeroCTAsProps {
 	primaryCta: { label: string; href: string }
@@ -42,19 +41,16 @@ export function HeroCTAs({ primaryCta, secondaryCta }: HeroCTAsProps) {
 					</span>
 				</a>
 			</Button>
-			<div className='ml-0 flex items-center gap-3 text-xs text-slate-500 sm:ml-2'>
-				<Badge
-					variant='outline'
-					className='rounded-full bg-emerald-50 px-2.5 py-1 ring-1 ring-emerald-100'
-				>
-					Shipping mindset
-				</Badge>
-				<Badge
-					variant='outline'
-					className='rounded-full bg-indigo-50 px-2.5 py-1 ring-1 ring-indigo-100'
-				>
-					Metrics-first
-				</Badge>
+			<div className='ml-0 flex items-center gap-2 text-xs text-slate-500 sm:ml-4'>
+				<span className='flex items-center gap-1.5'>
+					<span className='h-1.5 w-1.5 rounded-full bg-emerald-500' />
+					<span>Shipping mindset</span>
+				</span>
+				<span className='text-slate-300'>•</span>
+				<span className='flex items-center gap-1.5'>
+					<span className='h-1.5 w-1.5 rounded-full bg-indigo-500' />
+					<span>Metrics-first</span>
+				</span>
 			</div>
 		</motion.div>
 	)
