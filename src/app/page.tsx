@@ -4,7 +4,7 @@ import { Skills } from '@/components/sections/skills'
 import { Projects } from '@/components/sections/projects'
 import { ParallaxShowcase } from '@/components/sections/parallax-showcase'
 import { HorizontalScroll } from '@/components/sections/horizontal-scroll'
-import { Packages } from '@/components/sections/packages'
+import PackagesSection from './_components/sections/packages'
 import { Timeline } from '@/components/sections/timeline'
 import { Contact } from '@/components/sections/contact'
 import ServicesSection from './_components/sections/services'
@@ -15,11 +15,11 @@ export default function Page() {
 			<TopNav />
 			<Hero />
 			<ServicesSection />
+			<PackagesSection />
 			<Skills />
 			<Projects />
 			<ParallaxShowcase />
 			<HorizontalScroll />
-			<Packages />
 			<Timeline />
 			<Contact />
 		</div>
