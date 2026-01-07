@@ -30,8 +30,8 @@ export function ServiceListItem({
 				className={cn(
 					'group w-full flex items-center justify-between p-4 rounded-xl transition-all duration-300 h-auto',
 					isActive
-						? 'bg-white/5 border border-white/10'
-						: 'hover:bg-white/5 border border-transparent hover:border-white/5'
+						? 'bg-slate-100 border border-slate-200 shadow-sm'
+						: 'hover:bg-slate-50 border border-transparent hover:border-slate-200'
 				)}
 			>
 				<div className='flex items-center gap-4'>
@@ -39,8 +39,8 @@ export function ServiceListItem({
 						className={cn(
 							'p-2 rounded-lg transition-colors duration-300',
 							isActive
-								? 'bg-white text-black'
-								: 'bg-neutral-900 text-neutral-500 group-hover:text-white'
+								? 'bg-slate-900 text-white'
+								: 'bg-slate-100 text-slate-600 group-hover:text-slate-900'
 						)}
 					>
 						<service.icon size={20} />
@@ -49,8 +49,8 @@ export function ServiceListItem({
 						className={cn(
 							'text-xl font-medium transition-colors duration-300',
 							isActive
-								? 'text-white'
-								: 'text-neutral-500 group-hover:text-neutral-300'
+								? 'text-slate-900'
+								: 'text-slate-600 group-hover:text-slate-900'
 						)}
 					>
 						{service.title}
@@ -64,7 +64,7 @@ export function ServiceListItem({
 					}}
 					transition={{ duration: 0.3 }}
 				>
-					<ChevronRight size={20} className='text-white/50' />
+					<ChevronRight size={20} className='text-slate-400' />
 				</motion.div>
 			</Button>
 		</motion.div>

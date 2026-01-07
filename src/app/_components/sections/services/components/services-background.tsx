@@ -9,9 +9,9 @@ interface ServicesBackgroundProps {
 
 export function ServicesBackground({ activeService }: ServicesBackgroundProps) {
 	return (
-		<div className='absolute inset-0 z-0 transition-colors duration-700 ease-in-out bg-neutral-950'>
+		<div className='absolute inset-0 z-0 transition-colors duration-700 ease-in-out bg-white'>
 			<motion.div
-				className='absolute inset-0 opacity-20'
+				className='absolute inset-0 opacity-5'
 				animate={{
 					background: `radial-gradient(circle at 50% 50%, ${activeService.color} 0%, transparent 60%)`,
 				}}
@@ -20,7 +20,7 @@ export function ServicesBackground({ activeService }: ServicesBackgroundProps) {
 					ease: 'easeInOut',
 				}}
 			/>
-			<div className='absolute inset-0 bg-neutral-950/80 backdrop-blur-3xl' />
+			<div className='absolute inset-0 bg-white/50 backdrop-blur-3xl' />
 		</div>
 	)
 }

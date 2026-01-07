@@ -11,22 +11,22 @@ export function ServicesHeader() {
 				viewport={{ once: true }}
 				className='max-w-3xl'
 			>
-				<div className='flex items-center gap-2 text-sm font-medium text-neutral-500 mb-6 uppercase tracking-wider'>
-					<span className='w-2 h-2 rounded-full bg-blue-500 animate-pulse' />
-					Capabilities & Expertise
-				</div>
-				<h2 className='text-4xl md:text-6xl font-semibold tracking-tight text-white mb-6'>
-					Everything you need to{' '}
-					<br className='hidden md:block' />
-					<span className='text-neutral-500'>
-						accelerate your digital growth.
-					</span>
-				</h2>
-				<p className='text-lg text-neutral-400 max-w-xl leading-relaxed'>
-					We combine technical precision with creative
-					problem-solving to deliver solutions that scale.
-					Explore our core services below.
-				</p>
+			<div className='flex items-center gap-2 text-sm font-medium text-slate-500 mb-6 uppercase tracking-wider'>
+				<span className='w-2 h-2 rounded-full bg-emerald-500 animate-pulse' />
+				Capabilities & Expertise
+			</div>
+			<h2 className='text-4xl md:text-6xl font-semibold tracking-tight text-slate-900 mb-6'>
+				Everything you need to{' '}
+				<br className='hidden md:block' />
+				<span className='text-slate-600'>
+					accelerate your digital growth.
+				</span>
+			</h2>
+			<p className='text-lg text-slate-600 max-w-xl leading-relaxed'>
+				We combine technical precision with creative
+				problem-solving to deliver solutions that scale.
+				Explore our core services below.
+			</p>
 			</motion.div>
 		</div>
 	)

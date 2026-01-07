@@ -5,7 +5,6 @@ import { services } from './data'
 import { useServicesScroll } from './hooks/use-services-scroll'
 import { useExpandedService } from './hooks/use-expanded-service'
 import {
-	GrainOverlay,
 	ServicesHeader,
 	ServicesBackground,
 	ServicesProgressBar,
@@ -24,8 +23,7 @@ export default function ServicesSection() {
 	const activeServiceData = services[activeService]
 
 	return (
-		<section className='relative w-full bg-neutral-950 text-neutral-200 selection:bg-neutral-800 font-sans'>
-			<GrainOverlay />
+		<section className='relative w-full bg-white font-sans'>
 			<ServicesHeader />
 
 			{/* Main Sticky Content Area */}
@@ -101,7 +99,7 @@ export default function ServicesSection() {
 			</AnimatePresence>
 
 			{/* Footer Blend */}
-			<div className='h-32 w-full bg-gradient-to-t from-neutral-950 to-transparent pointer-events-none relative z-20 -mt-32' />
+			<div className='h-32 w-full bg-gradient-to-t from-white to-transparent pointer-events-none relative z-20 -mt-32' />
 		</section>
 	)
 }

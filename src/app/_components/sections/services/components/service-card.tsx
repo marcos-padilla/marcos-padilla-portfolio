@@ -25,15 +25,15 @@ export function ServiceCard({
 			animate={{ opacity: isExpanded ? 0 : 1, scale: 1, y: 0 }}
 			exit={{ opacity: 0, scale: 0.95, y: -20 }}
 			transition={{ type: 'spring', stiffness: 200, damping: 25 }}
-			className='w-full aspect-square md:aspect-[4/3] relative rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl group cursor-pointer'
+			className='w-full aspect-square md:aspect-[4/3] relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm group cursor-pointer transition-shadow hover:shadow-md'
 			onClick={onExpand}
 		>
-			{/* Abstract Dynamic Background */}
-			<div className='absolute inset-0 bg-grid-white/[0.02]' />
+			{/* Subtle Background Gradient */}
+			<div className='absolute inset-0 bg-gradient-to-br from-slate-50/50 to-transparent' />
 
-			{/* Glow Blob */}
+			{/* Subtle Glow Blob */}
 			<div
-				className='absolute top-0 right-0 w-3/4 h-3/4 opacity-20 blur-[100px] transition-colors duration-500'
+				className='absolute top-0 right-0 w-3/4 h-3/4 opacity-5 blur-[100px] transition-colors duration-500'
 				style={{ backgroundColor: service.color }}
 			/>
 
@@ -42,25 +42,25 @@ export function ServiceCard({
 					<ServiceIcon icon={service.icon} color={service.color} />
 					<motion.h3
 						layoutId={`title-${service.id}`}
-						className='mt-6 text-3xl font-semibold text-white tracking-tight'
+						className='mt-6 text-3xl font-semibold text-slate-900 tracking-tight'
 					>
 						{service.title}
 					</motion.h3>
 					<motion.p
 						layoutId={`desc-${service.id}`}
-						className='mt-4 text-lg text-neutral-400 leading-relaxed line-clamp-3'
+						className='mt-4 text-lg text-slate-600 leading-relaxed line-clamp-3'
 					>
 						{service.description}
 					</motion.p>
 				</div>
 
 				<div className='space-y-4 pointer-events-auto'>
-					<div className='h-px w-full bg-gradient-to-r from-white/20 to-transparent' />
+					<div className='h-px w-full bg-gradient-to-r from-slate-200 to-transparent' />
 					<ul className='grid grid-cols-1 gap-2'>
 						{service.details.map((detail, i) => (
 							<li
 								key={i}
-								className='flex items-center gap-2 text-sm text-neutral-300'
+								className='flex items-center gap-2 text-sm text-slate-600'
 							>
 								<div
 									className='w-1.5 h-1.5 rounded-full'
@@ -78,13 +78,13 @@ export function ServiceCard({
 			{/* Hover Effect CTA */}
 			<div className='absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto z-20'>
 				<Button
-					variant='ghost'
+					variant='outline'
 					size='sm'
 					onClick={(e) => {
 						e.stopPropagation()
 						onExpand()
 					}}
-					className='flex items-center gap-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full backdrop-blur-md'
+					className='flex items-center gap-2 text-sm font-medium text-slate-700 bg-white border-slate-200 hover:bg-slate-50 px-4 py-2 rounded-xl shadow-sm'
 				>
 					Learn more <ArrowUpRight size={14} />
 				</Button>
