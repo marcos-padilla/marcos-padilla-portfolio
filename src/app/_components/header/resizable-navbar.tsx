@@ -96,7 +96,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 				boxShadow: visible
 					? '0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9)'
 					: '0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
-				width: visible ? '40%' : '100%',
+				width: visible ? '65%' : '100%',
 				borderWidth: visible ? '1px' : '1px',
 				borderColor: visible
 					? 'rgba(255, 255, 255, 0.3)'
@@ -108,7 +108,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 				damping: 50,
 			}}
 			style={{
-				minWidth: '800px',
+				minWidth: '1000px',
 			}}
 			className={cn(
 				'relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full px-6 py-3 lg:flex',
@@ -150,7 +150,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
 		<motion.div
 			onMouseLeave={() => setHovered(null)}
 			className={cn(
-				'absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-1 text-sm font-medium text-slate-600 transition duration-200 hover:text-slate-900 lg:flex lg:space-x-1',
+				'absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-slate-600 transition duration-200 hover:text-slate-900 lg:flex lg:space-x-2 px-6',
 				className
 			)}
 		>
@@ -297,7 +297,11 @@ export const MobileNavToggle = ({
 }
 
 export const NavbarLogo = ({ children }: { children?: React.ReactNode }) => {
-	return <div className='relative z-20 flex items-center'>{children}</div>
+	return (
+		<div className='relative z-20 flex items-center shrink-0 min-w-[200px] mr-4'>
+			{children}
+		</div>
+	)
 }
 
 export const NavbarButton = ({

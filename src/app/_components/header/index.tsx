@@ -51,7 +51,7 @@ export default function Header() {
 					<NavLogo />
 				</NavbarLogo>
 				<NavItems items={navLinks} />
-				<div className='relative z-20 ml-auto'>
+				<div className='relative z-20 ml-auto shrink-0'>
 					<NavCTA />
 				</div>
 			</NavBody>

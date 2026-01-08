@@ -19,7 +19,7 @@ export function PackagesHeader() {
 				</div>
 				<h2 className='text-4xl md:text-5xl font-bold tracking-tight mb-4 text-slate-900'>
 					Built for{' '}
-					<span className='text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600'>
+					<span className='text-slate-600'>
 						Builders.
 					</span>
 				</h2>
@@ -41,7 +41,11 @@ export function PackagesHeader() {
 					className='inline-flex items-center gap-2 text-slate-700 border-b border-slate-300 pb-1 hover:border-slate-900 transition-colors group'
 					asChild
 				>
-					<a href='#'>
+					<a
+						href='https://github.com/marcos-padilla'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						View all on GitHub
 						<ArrowRight
 							size={16}

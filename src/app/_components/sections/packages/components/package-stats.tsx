@@ -6,6 +6,10 @@ interface PackageStatsProps {
 }
 
 export function PackageStats({ pkg }: PackageStatsProps) {
+	if (pkg.showStats === false) {
+		return null
+	}
+
 	return (
 		<div className='flex gap-3 text-slate-500'>
 			<div className='flex items-center gap-1 text-xs font-medium'>

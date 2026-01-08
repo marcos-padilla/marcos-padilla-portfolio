@@ -135,7 +135,7 @@ export function ExpandedCard({ service, onClose }: ExpandedCardProps) {
 													{feature.split(':')[0]}
 												</h5>
 												<p className='text-sm text-slate-600'>
-													Included in our standard
+													Included in my standard
 													engagement packages.
 												</p>
 											</div>
@@ -152,7 +152,7 @@ export function ExpandedCard({ service, onClose }: ExpandedCardProps) {
 												Ready to start?
 											</p>
 											<p className='text-sm text-slate-600'>
-												Let&apos;s discuss how we can help.
+												Let&apos;s discuss how I can help.
 											</p>
 										</div>
 										<Button

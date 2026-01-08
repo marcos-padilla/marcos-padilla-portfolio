@@ -64,9 +64,16 @@ export function SpotlightCard({ pkg, index }: SpotlightCardProps) {
 				</div>
 
 				{/* Title & Description */}
-				<h3 className='text-2xl font-semibold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors'>
-					{pkg.name}
-				</h3>
+				<div className='mb-3'>
+					<h3 className='text-2xl font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors'>
+						{pkg.name}
+					</h3>
+					{pkg.requiresBM360 && (
+						<p className='text-xs text-slate-500 mt-1 italic'>
+							Requires BusinessMate360 account
+						</p>
+					)}
+				</div>
 				<p className='text-slate-600 leading-relaxed mb-8 flex-grow'>
 					{pkg.description}
 				</p>

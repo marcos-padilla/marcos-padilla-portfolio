@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Command } from 'lucide-react'
-import { PROFILE } from '@/data'
+import { Code2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function NavLogo() {
@@ -15,12 +14,12 @@ export function NavLogo() {
 			<motion.div
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 0.95 }}
-				className='w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-shadow'
+				className='w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-white shadow-lg shadow-slate-900/20 group-hover:shadow-slate-900/30 transition-shadow'
 			>
-				<Command size={18} />
+				<Code2 size={18} />
 			</motion.div>
 			<span className='font-bold text-xl tracking-tight text-slate-900 group-hover:text-slate-700 transition-colors'>
-				{PROFILE.name.split(' ')[0]}
+				marcos-padilla.dev
 			</span>
 		</Link>
 	)

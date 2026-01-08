@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { DownloadResumeButton } from './components/download-resume-button'
 
 interface HeroCTAsProps {
 	primaryCta: { label: string; href: string }
@@ -28,19 +29,7 @@ export function HeroCTAs({ primaryCta, secondaryCta }: HeroCTAsProps) {
 					</span>
 				</a>
 			</Button>
-			<Button
-				variant='outline'
-				size='lg'
-				className='rounded-2xl border-slate-200 bg-white/70 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm backdrop-blur transition hover:shadow-md hover:bg-white'
-				asChild
-			>
-				<a href={secondaryCta.href}>
-					{secondaryCta.label}
-					<span aria-hidden className='ml-2 text-slate-400'>
-						↗
-					</span>
-				</a>
-			</Button>
+			<DownloadResumeButton href={secondaryCta.href} label={secondaryCta.label} />
 			<div className='ml-0 flex items-center gap-2 text-xs text-slate-500 sm:ml-4'>
 				<span className='flex items-center gap-1.5'>
 					<span className='h-1.5 w-1.5 rounded-full bg-emerald-500' />
