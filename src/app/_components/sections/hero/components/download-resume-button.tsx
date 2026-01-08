@@ -19,7 +19,7 @@ export function DownloadResumeButton({
 
 	const handleClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault()
-		
+
 		if (isDownloading || isDownloaded) return
 
 		setIsDownloading(true)
@@ -30,7 +30,7 @@ export function DownloadResumeButton({
 		// Trigger actual download
 		const link = document.createElement('a')
 		link.href = href
-		link.download = 'Marcos-Padilla-Resume.pdf'
+		link.download = 'marcos-padilla-resume.pdf'
 		document.body.appendChild(link)
 		link.click()
 		document.body.removeChild(link)
@@ -127,7 +127,10 @@ export function DownloadResumeButton({
 									damping: 17,
 								}}
 							>
-								<ArrowUpRight size={16} className='text-slate-400' />
+								<ArrowUpRight
+									size={16}
+									className='text-slate-400'
+								/>
 							</motion.span>
 						</motion.div>
 					)}
@@ -149,4 +152,3 @@ export function DownloadResumeButton({
 		</motion.a>
 	)
 }
-

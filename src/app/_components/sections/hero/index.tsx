@@ -20,7 +20,10 @@ export default function PortfolioHeroSection({
 	subheadline = 'I build fast, beautiful products — and I ship data + AI that actually moves metrics.',
 	location = 'Based in Florida • Open to remote',
 	primaryCta = { label: 'View Projects', href: '#projects' },
-	secondaryCta = { label: 'Download Résumé', href: '/resume.pdf' },
+	secondaryCta = {
+		label: 'Download Résumé',
+		href: '/marcos-padilla-resume.pdf',
+	},
 }: HeroProps) {
 	const containerRef = useRef<HTMLDivElement | null>(null)
 
