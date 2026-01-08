@@ -10,8 +10,13 @@ export function StackMarquee() {
 				<p className='text-xs font-medium text-slate-500'>Stack I use</p>
 			</div>
 
+			{/* Screen reader only: accessible list of technologies */}
+			<ul className='sr-only'>
+				<li>Technologies I use: {chips.join(', ')}</li>
+			</ul>
+
 			{/* On mobile: wrap neatly (no marquee) */}
-			<div className='mt-3 md:hidden flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white/60 p-3 shadow-sm backdrop-blur'>
+			<div className='mt-3 md:hidden flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white/60 p-3 shadow-sm backdrop-blur' aria-hidden='true'>
 				{chips.map((c) => (
 					<Badge
 						key={c}
@@ -24,11 +29,11 @@ export function StackMarquee() {
 			</div>
 
 			{/* On md+: full-bleed ticker */}
-			<div className='mt-3 hidden md:block'>
+			<div className='mt-3 hidden md:block' aria-hidden='true'>
 				<div className='relative left-1/2 right-1/2 -mx-[50vw] w-screen px-6'>
 					<div className='mx-auto max-w-7xl'>
 						<div className='overflow-hidden rounded-2xl border border-slate-200 bg-white/60 shadow-sm backdrop-blur'>
-							<div className='tickerTrack group flex gap-3 py-3 [--duration:28s] hover:[animation-play-state:paused]'>
+							<div className='tickerTrack group flex gap-3 py-3 [--duration:28s] hover:[animation-play-state:paused]' aria-hidden='true'>
 								<div className='tickerGroup flex shrink-0 gap-3 pr-3'>
 									{chips.map((c) => (
 										<Badge
@@ -42,7 +47,7 @@ export function StackMarquee() {
 								</div>
 								<div
 									className='tickerGroup flex shrink-0 gap-3 pr-3'
-									aria-hidden
+									aria-hidden='true'
 								>
 									{chips.map((c) => (
 										<Badge
