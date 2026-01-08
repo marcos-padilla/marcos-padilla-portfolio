@@ -6,7 +6,7 @@ interface ProjectPreviewProps {
 
 export function ProjectPreview({ project }: ProjectPreviewProps) {
 	return (
-		<div className='w-full md:w-1/2 h-48 md:h-full order-1 md:order-2 relative overflow-hidden bg-slate-100 rounded-r-3xl'>
+		<div className='w-full md:w-1/2 h-48 md:h-full order-1 md:order-2 relative overflow-hidden bg-slate-100 rounded-r-3xl flex-shrink-0'>
 			<div
 				className={`absolute inset-0 bg-gradient-to-br ${project.imageGradient} opacity-60`}
 			/>

@@ -6,7 +6,7 @@ export interface Project {
 	tech: string[]
 	color: string
 	link: string
-	repo: string
+	repo?: string
 	imageGradient: string
 }
 

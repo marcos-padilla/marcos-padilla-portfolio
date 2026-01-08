@@ -11,19 +11,22 @@ interface ProjectActionsProps {
 export function ProjectActions({ project }: ProjectActionsProps) {
 	return (
 		<div className='flex items-center gap-4 pt-6 border-t border-slate-200'>
-			<Button
-				size='lg'
-				className='flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors group'
-				asChild
-			>
-				<a href={project.link}>
-					View Live{' '}
-					<ArrowUpRight
-						size={18}
-						className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform'
-					/>
-				</a>
-			</Button>
+			{project.link && project.link !== '' && (
+				<Button
+					size='lg'
+					className='flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors group'
+					asChild
+				>
+					<a href={project.link}>
+						View Live{' '}
+						<ArrowUpRight
+							size={18}
+							className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform'
+						/>
+					</a>
+				</Button>
+			)}
+			{project.repo && project.repo !== '' && (
 			<Button
 				variant='outline'
 				size='icon'
@@ -34,6 +37,7 @@ export function ProjectActions({ project }: ProjectActionsProps) {
 					<Github size={20} />
 				</a>
 			</Button>
+		)}
 		</div>
 	)
 }

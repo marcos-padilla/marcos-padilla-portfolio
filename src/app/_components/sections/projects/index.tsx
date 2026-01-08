@@ -26,7 +26,7 @@ export default function ProjectsSection() {
 				<ProjectsHeader />
 
 				{/* Stacking Cards Container */}
-				<div className='flex flex-col items-center'>
+				<div className='flex flex-col items-center w-full'>
 					{projects.map((project, index) => {
 						// Calculate scale range for each card
 						// As scroll progresses, the scale decreases slightly to create depth

@@ -17,7 +17,7 @@ export function ProjectContent({
 	totalProjects,
 }: ProjectContentProps) {
 	return (
-		<div className='w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between order-2 md:order-1 relative z-10'>
+		<div className='w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between order-2 md:order-1 relative z-10 flex-shrink-0'>
 			<div>
 				<div className='flex items-center justify-between mb-8'>
 					<Badge

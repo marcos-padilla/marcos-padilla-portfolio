@@ -38,14 +38,14 @@ export function ProjectCard({
 	return (
 		<div
 			ref={container}
-			className='h-screen flex items-center justify-center sticky top-0'
+			className='h-screen flex items-center justify-center sticky top-0 w-full'
 		>
 			<motion.div
 				style={{
 					scale,
 					top: `calc(${topOffset}px)`,
 				}}
-				className='relative flex flex-col md:flex-row w-full max-w-6xl h-[65vh] md:h-[600px] bg-white backdrop-blur-xl border border-slate-200 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow origin-top'
+				className='relative flex flex-col md:flex-row w-full max-w-6xl h-[65vh] md:h-[600px] bg-white backdrop-blur-xl border border-slate-200 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow origin-top flex-shrink-0'
 			>
 				<ProjectContent
 					project={project}
