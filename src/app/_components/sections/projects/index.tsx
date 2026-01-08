@@ -16,6 +16,7 @@ export default function ProjectsSection() {
 
 	return (
 		<section
+			id='projects'
 			ref={container}
 			className='relative bg-white text-slate-900 font-sans pt-20 pb-40'
 		>

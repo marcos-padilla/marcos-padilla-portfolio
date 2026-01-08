@@ -23,7 +23,7 @@ export default function ServicesSection() {
 	const activeServiceData = services[activeService]
 
 	return (
-		<section className='relative w-full bg-white font-sans'>
+		<section id='services' className='relative w-full bg-white font-sans'>
 			<ServicesHeader />
 
 			{/* Main Sticky Content Area */}

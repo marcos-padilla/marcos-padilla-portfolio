@@ -5,7 +5,7 @@ import { PackagesBackground, PackagesHeader, SpotlightCard } from './components'
 
 export default function PackagesSection() {
 	return (
-		<section className='relative w-full py-32 bg-white font-sans overflow-hidden'>
+		<section id='packages' className='relative w-full py-32 bg-white font-sans overflow-hidden'>
 			<PackagesBackground />
 
 			<div className='relative z-10 max-w-7xl mx-auto px-6'>

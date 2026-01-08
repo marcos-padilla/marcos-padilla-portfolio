@@ -7,7 +7,6 @@ import {
 	Cloud,
 	PenTool,
 	BarChart3,
-	type LucideIcon,
 } from 'lucide-react'
 import type { Service } from './types'
 
@@ -193,4 +192,3 @@ export const services: Service[] = [
 		],
 	},
 ]
-
