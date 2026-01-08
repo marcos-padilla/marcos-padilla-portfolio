@@ -26,8 +26,8 @@ export const experiences: ExperienceItem[] = [
 	{
 		id: 'exp-3',
 		role: 'BS in Computer Science',
-		company: 'University of Technology',
-		location: 'Boston, MA',
+		company: 'Marta Abreu University',
+		location: 'Santa Clara, Cuba',
 		period: '2020 - 2022',
 		description:
 			'Started pursuing a Bachelor of Science in Computer Science. Focused on core programming concepts, algorithms, and software engineering principles. Incomplete due to relocation to the United States.',
