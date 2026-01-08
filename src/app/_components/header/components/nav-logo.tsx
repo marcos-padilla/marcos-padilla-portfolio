@@ -5,9 +5,18 @@ import { Code2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function NavLogo() {
+	const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		// If we're already on the home page, scroll to top
+		if (window.location.pathname === '/') {
+			e.preventDefault()
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}
+	}
+
 	return (
 		<Link
-			href='#'
+			href='/'
+			onClick={handleClick}
 			className='flex items-center gap-2 group relative'
 			aria-label='Home'
 		>
