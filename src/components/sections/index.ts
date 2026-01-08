@@ -1,7 +1,0 @@
-export { Hero } from './hero'
-export { Skills } from './skills'
-export { ParallaxShowcase } from './parallax-showcase'
-export { HorizontalScroll } from './horizontal-scroll'
-export { Packages } from './packages'
-export { Timeline } from './timeline'
-export { Contact } from './contact'

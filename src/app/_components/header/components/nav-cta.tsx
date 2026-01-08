@@ -1,23 +1,43 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { PROFILE } from '@/data'
-import { motion } from 'framer-motion'
 
 interface NavCTAProps {
 	variant?: 'desktop' | 'mobile'
 	onClick?: () => void
 }
 
+const scrollToContact = () => {
+	const element = document.getElementById('contact')
+	if (element) {
+		const headerOffset = 100
+		const elementPosition = element.getBoundingClientRect().top
+		const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: 'smooth',
+		})
+	}
+}
+
+const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+	e.preventDefault()
+	scrollToContact()
+}
+
 export function NavCTA({ variant = 'desktop', onClick }: NavCTAProps) {
 	if (variant === 'mobile') {
 		return (
 			<Button
-				onClick={onClick}
+				onClick={() => {
+					scrollToContact()
+					onClick?.()
+				}}
 				className='w-full py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-base transition-colors'
 				size='lg'
 			>
-				{PROFILE.ctaPrimary.label}
+				Contact Me
 			</Button>
 		)
 	}
@@ -28,8 +48,8 @@ export function NavCTA({ variant = 'desktop', onClick }: NavCTAProps) {
 			size='sm'
 			className='hidden md:inline-flex rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold shadow-sm hover:shadow-md transition-all'
 		>
-			<a href={PROFILE.ctaPrimary.href}>
-				{PROFILE.ctaPrimary.label}
+			<a href='#contact' onClick={handleContactClick}>
+				Contact Me
 			</a>
 		</Button>
 	)
