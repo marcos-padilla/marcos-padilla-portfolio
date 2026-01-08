@@ -158,6 +158,23 @@ export function ExpandedCard({ service, onClose }: ExpandedCardProps) {
 										<Button
 											size='lg'
 											className='w-full sm:w-auto px-8 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 flex items-center justify-center gap-2 shadow-sm'
+											onClick={() => {
+												onClose()
+												// Small delay to allow card to close before scrolling
+												setTimeout(() => {
+													const element = document.getElementById('contact')
+													if (element) {
+														const headerOffset = 100
+														const elementPosition = element.getBoundingClientRect().top
+														const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+														window.scrollTo({
+															top: offsetPosition,
+															behavior: 'smooth',
+														})
+													}
+												}, 300)
+											}}
 										>
 											Get in Touch <ArrowUpRight size={18} />
 										</Button>
