@@ -1,7 +1,7 @@
 import { TopNav } from '@/components/common/top-nav'
 import Hero from '@/app/_components/sections/hero'
 import { Skills } from '@/components/sections/skills'
-import { Projects } from '@/components/sections/projects'
+import ProjectsSection from './_components/sections/projects'
 import { ParallaxShowcase } from '@/components/sections/parallax-showcase'
 import { HorizontalScroll } from '@/components/sections/horizontal-scroll'
 import PackagesSection from './_components/sections/packages'
@@ -17,7 +17,7 @@ export default function Page() {
 			<ServicesSection />
 			<PackagesSection />
 			<Skills />
-			<Projects />
+			<ProjectsSection />
 			<ParallaxShowcase />
 			<HorizontalScroll />
 			<Timeline />

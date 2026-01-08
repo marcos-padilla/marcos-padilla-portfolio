@@ -1,6 +1,5 @@
 export { Hero } from './hero'
 export { Skills } from './skills'
-export { Projects } from './projects'
 export { ParallaxShowcase } from './parallax-showcase'
 export { HorizontalScroll } from './horizontal-scroll'
 export { Packages } from './packages'
