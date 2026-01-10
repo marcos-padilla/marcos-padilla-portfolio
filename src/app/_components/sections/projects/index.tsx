@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useScroll } from 'framer-motion'
 import { projects } from './data'
 import { ProjectsBackground, ProjectsHeader, ProjectCard } from './components'
+import DriftShowcase from './drift-showcase'
 
 export default function ProjectsSection() {
 	const container = useRef<HTMLDivElement>(null)
@@ -47,6 +48,8 @@ export default function ProjectsSection() {
 					})}
 				</div>
 			</div>
+
+			<DriftShowcase />
 		</section>
 	)
 }
